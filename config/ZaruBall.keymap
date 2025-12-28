@@ -119,6 +119,22 @@
 
             label = "MKP_EXIT_AML";
         };
+
+        aml_raise: aml_rise {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1>, <&macro_tap>, <&lt 3 LANG1>;
+
+            label = "AML_RISE";
+        };
+
+        aml_lower: aml_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1>, <&macro_tap>, <&lt 2 LANG2>;
+
+            label = "AML_LOWER";
+        };
     };
 };
 
@@ -142,11 +158,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&to_layer_0 ESC           &none   &none   &none   &none   &none             &trans  &trans  &trans  &trans                    &trans    &trans     &trans    &trans     &trans    &trans
-&to_layer_0 TAB           &none   &none   &none   &none   &none             &trans  &trans  &trans  &trans                    &trans    &trans     &mkp MB3  &trans     &trans    &trans
-&to_layer_0 LEFT_CONTROL  &none   &none   &none   &none   &none   &none     &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp MB4  &mkp LCLK  &mo 2     &mkp RCLK  &mkp MB5  &trans
-&to_layer_0 LSHIFT        &trans  &trans  &trans  &trans  &trans  &none     &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans    &trans     &trans    &trans     &trans    &lt SCROLL BACKSLASH
-&trans                    &trans          &trans  &trans  &to 0   &trans                                      &trans          &to 0                                               &trans
+&to_layer_0 ESC           &none   &none   &none   &none   &none                 &trans  &trans  &trans  &trans                    &trans      &trans     &trans    &trans     &trans    &trans
+&to_layer_0 TAB           &none   &none   &none   &none   &none                 &trans  &trans  &trans  &trans                    &trans      &trans     &mkp MB3  &trans     &trans    &trans
+&to_layer_0 LEFT_CONTROL  &none   &none   &none   &none   &none       &none     &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp MB4    &mkp LCLK  &mo 2     &mkp RCLK  &mkp MB5  &trans
+&to_layer_0 LSHIFT        &trans  &trans  &trans  &trans  &trans      &none     &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans      &trans     &trans    &trans     &trans    &lt SCROLL BACKSLASH
+&trans                    &trans          &trans  &trans  &aml_lower  &trans                                      &trans          &aml_raise                                            &trans
             >;
         };
 
