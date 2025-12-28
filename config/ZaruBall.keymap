@@ -89,10 +89,19 @@
             display-name = "SandS";
         };
 
-        ht0: ht0 {
+        ht_layer_0: ht_layer_0 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT0";
+            label = "HT_LAYER_0";
             bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
+
+        ht_kp_0: ht_kp_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_0";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -169,11 +178,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC           &kp N1      &kp N2  &kp N3        &kp N4        &kp N5                            &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                              &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB           &kp Q       &kp W   &kp E         &kp R         &kp T                             &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                            &kp Y         &kp U   &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_CONTROL  &kp A       &kp S   &kp D         &kp F         &kp G         &kp LEFT_BRACKET    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp RIGHT_BRACKET       &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z       &kp X   &kp C         &kp V         &kp B         &kp LEFT_BRACE      &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RIGHT_BRACE         &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&td0              &kp C_MUTE          &kp LEFT_ALT  &kp LEFT_GUI  &ht0 2 LANG2  &kp SPACE                                                                   &SandS RIGHT_SHIFT RET  &ht0 3 LANG1                                        &td1
+&kp ESC           &kp N1      &kp N2  &kp N3        &kp N4        &kp N5                                   &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                                &kp NUMBER_6         &kp N7  &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB           &kp Q       &kp W   &kp E         &kp R         &kp T                                    &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                              &kp Y                &kp U   &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_CONTROL  &kp A       &kp S   &kp D         &kp F         &kp G                &kp LEFT_BRACKET    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp RIGHT_BRACKET         &kp H                &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z       &kp X   &kp C         &kp V         &kp B                &kp LEFT_BRACE      &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RIGHT_BRACE           &kp N                &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&td0              &kp C_MUTE          &kp LEFT_ALT  &kp LEFT_GUI  &ht_layer_0 2 LANG2  &kp SPACE                                                                   &ht_kp_0 RIGHT_SHIFT RET  &ht_layer_0 3 LANG1                                        &td1
             >;
         };
 
