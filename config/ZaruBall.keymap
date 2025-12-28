@@ -123,7 +123,7 @@
         aml_raise: aml_rise {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1>, <&macro_tap>, <&lt 3 LANG1>;
+            bindings = <&tog 1>, <&macro_press>, <&lt 3 LANG1>;
 
             label = "AML_RISE";
         };
@@ -131,7 +131,7 @@
         aml_lower: aml_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1>, <&macro_tap>, <&lt 2 LANG2>;
+            bindings = <&tog 1>, <&macro_press>, <&lt 2 LANG2>;
 
             label = "AML_LOWER";
         };
