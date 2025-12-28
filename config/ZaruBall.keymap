@@ -127,6 +127,7 @@
                 <&tog 1>,
                 <&macro_press>,
                 <&mo 3>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&tog 3>;
 
