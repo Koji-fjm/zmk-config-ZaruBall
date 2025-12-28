@@ -88,6 +88,22 @@
 
             display-name = "SandS";
         };
+
+        ht0: ht0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT0";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
+
+        td2: td2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD2";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&kp LANG1>;
+        };
     };
 };
 
@@ -164,7 +180,7 @@
 &kp TAB           &kp Q       &kp W   &kp E         &kp R         &kp T                            &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                            &kp Y         &kp U   &kp I      &kp O    &kp P     &kp MINUS
 &kp LEFT_CONTROL  &kp A       &kp S   &kp D         &kp F         &kp G        &kp LEFT_BRACKET    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp RIGHT_BRACKET       &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT         &kp Z       &kp X   &kp C         &kp V         &kp B        &kp LEFT_BRACE      &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RIGHT_BRACE         &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&td0              &kp C_MUTE          &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG2  &kp SPACE                                                                   &SandS RIGHT_SHIFT RET  &lt 3 LANG1                                         &td1
+&td0              &kp C_MUTE          &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG2  &kp SPACE                                                                   &SandS RIGHT_SHIFT RET  &td2                                                &td1
             >;
         };
 
