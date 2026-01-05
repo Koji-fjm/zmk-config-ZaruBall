@@ -32,7 +32,7 @@
         layers = <SCROLL>;
         input-processors = <
                             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
-                            &zip_x_scaler 1 20
+                            &zip_x_scaler 1 80
                             &zip_y_scaler 1 120
                             &zip_xy_to_scroll_mapper
         >;
@@ -201,7 +201,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
 &trans     &none          &none         &none         &none         &none                &trans  &trans  &trans  &trans              &none          &none            &none         &none                 &none                  &none
-&trans     &kp BACKSPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS            &trans  &trans  &trans  &trans              &kp LA(GRAVE)  &kp EXCLAMATION  &kp AT_SIGN   &kp POUND             &kp DOLLAR             &kp PERCENT
+&trans     &kp BACKSPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS            &trans  &trans  &trans  &trans              &kp GRAVE      &kp EXCLAMATION  &kp AT_SIGN   &kp POUND             &kp DOLLAR             &kp PERCENT
 &trans     &kp NUMBER_0   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &none     &trans  &trans  &trans  &trans    &kp LPAR  &kp CARET      &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE
 &kp COMMA  &kp PERIOD     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ENTER  &none     &trans  &trans  &trans  &trans    &kp RPAR  &kp EQUAL      &kp UNDERSCORE   &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
 &trans     &kp RSHFT                    &trans        &trans        &trans     &trans                                      &trans    &trans                                                                                     &studio_unlock
