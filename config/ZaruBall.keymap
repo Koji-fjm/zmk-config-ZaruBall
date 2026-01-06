@@ -113,7 +113,7 @@
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp RIGHT_SHIFT>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
     };
 };
