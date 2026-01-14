@@ -15,7 +15,6 @@
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-        wakeup-source;
         // chose nodeで設定しているからkscanいらない？ kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
         // Left Row0
