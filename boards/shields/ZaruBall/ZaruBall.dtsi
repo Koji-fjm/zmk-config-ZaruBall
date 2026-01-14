@@ -15,8 +15,8 @@
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-        // chose nodeで設定しているからkscanいらない？
-        kscan = <&kscan0>;
+        force-awake;
+        // chose nodeで設定しているからkscanいらない？ kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
         // Left Row0
             = <&key_physical_attrs 100 100    0   50       0     0     0>
